@@ -1,10 +1,11 @@
 # Sensory Game App
 
 05/06/2023 - Work In Progress
+Sound Effects from <a href="https://pixabay.com/sound-effects/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=43207">Pixabay</a>
 
 ## Note from the creator
 
-As a neurodivergent person, I find patterns can be very grounding. This app is my, simplified, take on sensory apps that allows the user to engage with calming colours and music.
+As a neurodivergent person, I find patterns can be very grounding and help me to self-stimulate (aka stim). This app is my, simplified, take on sensory apps that allows the user to engage with calming colours and music.
 
 This is an area of passion for me and there will be ongoing features added. For now, this project is a way for me to express myself, my love for accessibility as well as my passion for tech.
 
@@ -19,6 +20,8 @@ CSS3
 <img alt="wireframes of Sensory App layout and user states" src="./sensory-app-plan.svg">
 
 ## Screenshot (as of 08/06 - WIP!)
+
+<img alt="screenshot of Chill Clicks App with basic layout" src="./Sensory_Screenshotv1.png">
 
 ## How To Copy This Repo
 
