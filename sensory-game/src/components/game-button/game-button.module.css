@@ -1,4 +1,17 @@
 .gameButton {
-  color: purple;
+  width: 5rem;
+  height: 5rem;
+  margin: 10px;
   transition: opacity 0.2s;
+  border: 5px, solid, purple;
+}
+
+.gameButton:focus,
+.gameButton:focus-visible {
+  border: 10px, solid, orange;
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.gameButton:hover {
+  border-color: #000dff;
 }

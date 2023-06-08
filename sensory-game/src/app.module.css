@@ -1,0 +1,22 @@
+.App {
+  /* display: flex;
+  justify-content: center; */
+}
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 20px;
+}
+
+.game_body {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  margin-top: 10rem;
+}
+.game_top_row {
+}
+.game_bottom_row {
+}
