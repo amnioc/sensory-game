@@ -1,16 +1,20 @@
 import styles from "./game-button.module.css";
-//className={styles.Name}
+import bubble from "../../assets/bubble.mp3";
+
 const GameButton = () => {
-  return <button aria-label="game play" className={styles.gameButton}></button>;
+  const audio = new Audio(bubble);
+
+  const playSound = () => {
+    audio.play();
+  };
+
+  return (
+    <button
+      aria-label="game play"
+      className={styles.gameButton}
+      onClick={playSound}
+    ></button>
+  );
 };
 
 export default GameButton;
-
-// const audio = new Audio("LINK");
-// const buttons = document.querySelectorAll("button");
-
-// buttons.forEach(button => {
-//   button.addEventListener("click", () => {
-//     audio.play();
-//   });
-// });
