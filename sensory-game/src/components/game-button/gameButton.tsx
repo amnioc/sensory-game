@@ -1,18 +1,37 @@
 import styles from "./game-button.module.css";
-import bubble from "../../assets/bubble.mp3";
+import click from "../../assets/click.mp3";
 
-const GameButton = () => {
-  const audio = new Audio(bubble);
+interface GameButtonProps {
+  isMuted: boolean;
+  isDarkMode: boolean;
+}
+const GameButton: React.FC<GameButtonProps> = ({ isMuted, isDarkMode }) => {
+  const audio = new Audio(click);
+  const colorArrayLight = [
+    "lavender",
+    "palegreen",
+    "mistyrose",
+    "papayawhip",
+    "lemonchiffon",
+    "aliceblue",
+  ];
 
-  const playSound = () => {
-    audio.play();
+  const changeBackground = (color) => {
+    document.body.style.background = color;
+  };
+
+  const makeColourAndSound = () => {
+    isMuted ? audio.muted : audio.play();
+    changeBackground(
+      colorArrayLight[Math.floor(Math.random() * colorArrayLight.length)]
+    );
   };
 
   return (
     <button
       aria-label="game play"
       className={styles.gameButton}
-      onClick={playSound}
+      onClick={makeColourAndSound}
     ></button>
   );
 };

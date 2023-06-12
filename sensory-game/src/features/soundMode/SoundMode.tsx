@@ -1,9 +1,19 @@
+import { Dispatch, SetStateAction } from "react";
 import styles from "./sound-mode.module.css";
 
-const SoundMode = () => {
+interface SoundModeProps {
+  isMuted: boolean;
+  setIsMuted: Dispatch<SetStateAction<boolean>>;
+}
+
+const SoundMode: React.FC<SoundModeProps> = ({ isMuted, setIsMuted }) => {
+  const handleClick = () => {
+    isMuted ? setIsMuted(false) : setIsMuted(true);
+  };
   return (
     <label>
-      Music?<button>on/off</button>
+      Sound?
+      <button onClick={handleClick}>{isMuted ? <>off</> : <>on</>}</button>
     </label>
   );
 };
