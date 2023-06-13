@@ -1,7 +1,7 @@
 import styles from "./game-button.module.css";
 import click from "../../assets/click.mp3";
 
-interface GameButtonProps {
+export interface GameButtonProps {
   isMuted: boolean;
   isDarkMode: boolean;
 }
@@ -16,7 +16,7 @@ const GameButton: React.FC<GameButtonProps> = ({ isMuted, isDarkMode }) => {
     "aliceblue",
   ];
 
-  const changeBackground = (color) => {
+  const changeBackground = (color: string) => {
     document.body.style.background = color;
   };
 
