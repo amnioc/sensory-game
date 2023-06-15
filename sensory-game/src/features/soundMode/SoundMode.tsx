@@ -13,7 +13,7 @@ const SoundMode: React.FC<SoundModeProps> = ({ isMuted, setIsMuted }) => {
   return (
     <label>
       Sound?
-      <button onClick={handleClick}>{isMuted ? <>off</> : <>on</>}</button>
+      <button onClick={handleClick}>{isMuted ? <>on</> : <>off</>}</button>
     </label>
   );
 };

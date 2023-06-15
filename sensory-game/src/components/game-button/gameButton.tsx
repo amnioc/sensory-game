@@ -17,7 +17,7 @@ const GameButton: React.FC<GameButtonProps> = ({ isMuted, isDarkMode }) => {
     "aliceblue",
   ];
 
-  const changeBackground = (color) => {
+  const changeBackground = (color: string) => {
     document.body.style.background = color;
   };
 
