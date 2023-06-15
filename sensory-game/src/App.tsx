@@ -14,20 +14,28 @@ function App() {
   return (
     <>
       <section className={styles.settings}>
-        <DarkMode setIsDarkMode={setIsDarkMode} />
+        <DarkMode isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
         <SoundMode isMuted={isMuted} setIsMuted={setIsMuted} />
       </section>
       <main className={styles.game_body}>
         <section className={styles.game_top_row}>
-          <GameButton isMuted={isMuted} isDarkMode={isDarkMode} />
-          <GameButton isMuted={isMuted} isDarkMode={isDarkMode} />
-          <GameButton isMuted={isMuted} isDarkMode={isDarkMode} />
+          {Array(3)
+            .fill(true)
+            .map((_, i) => (
+              <GameButton isMuted={isMuted} isDarkMode={isDarkMode} key={i} />
+            ))}
         </section>
         <Header />
         <section className={styles.game_bottom_row}>
-          <GameButton isMuted={isMuted} isDarkMode={isDarkMode} />
-          <GameButton isMuted={isMuted} isDarkMode={isDarkMode} />
-          <GameButton isMuted={isMuted} isDarkMode={isDarkMode} />
+          {Array(3)
+            .fill(true)
+            .map((_, i) => (
+              <GameButton
+                isMuted={isMuted}
+                isDarkMode={isDarkMode}
+                key={i + 3}
+              />
+            ))}
         </section>
       </main>
     </>
