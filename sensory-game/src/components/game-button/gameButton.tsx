@@ -1,5 +1,6 @@
 import styles from "./game-button.module.css";
 import click from "../../assets/click.mp3";
+import React from "react";
 
 export interface GameButtonProps {
   isMuted: boolean;

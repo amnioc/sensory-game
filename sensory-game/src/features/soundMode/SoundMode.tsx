@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from "react";
 import styles from "./sound-mode.module.css";
 
-interface SoundModeProps {
+export interface SoundModeProps {
   isMuted: boolean;
   setIsMuted: Dispatch<SetStateAction<boolean>>;
 }
