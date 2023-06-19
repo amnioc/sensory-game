@@ -1,9 +1,62 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import GameButton from "../components/game-button/gameButton";
+import Header from "../features/header/Header";
+import SoundMode from "../features/soundMode/SoundMode";
+import DarkMode from "../features/darkMode/DarkMode";
 
-describe("gameButton", () => {
-  it("should render in colour purple", () => {
-    render(<GameButton isMuted={false} isDarkMode={false} />);
+describe("Header", () => {
+  it("should render Chill Clicks title", () => {
+    render(<Header />);
+    const titleElement = screen.getByText(/Chill Clicks/);
+    expect(titleElement).toBeInTheDocument();
   });
+});
+
+describe("Game Button", () => {
+  render(<GameButton isMuted={false} isDarkMode={false} />);
+  const testButton = screen.getByRole("button", { name: /game play/ });
+
+  it("should render a button with Game Play class name", () => {
+    expect(testButton).toBeTruthy();
+  });
+
+  //should play sound on click
+
+  describe("SoundMode Button", () => {
+    render(
+      <SoundMode
+        isMuted={false}
+        setIsMuted={() => {
+          return false;
+        }}
+      />
+    );
+    const soundButton = screen.getByRole("button", { name: /change sound/ });
+
+    it("should render a change-sound role button", () => {
+      expect(soundButton).toBeTruthy();
+    });
+    it("should read 'on' when sound is NOT muted/sound is ON", () => {
+      expect(soundButton).toHaveTextContent("on");
+    });
+  });
+
+  //should change text on click
+
+  describe("DarkMode Button", () => {
+    render(
+      <DarkMode
+        isDarkMode={false}
+        setIsDarkMode={() => {
+          return false;
+        }}
+      />
+    );
+  });
+  //darkMode button
+  //is rendered
+  //should change text on click
+
+  //snapshot
 });

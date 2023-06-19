@@ -1,5 +1,4 @@
-// import { useState } from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import styles from "./app.module.css";
 import GameButton from "./components/game-button/gameButton";
 import DarkMode from "./features/darkMode/DarkMode";
