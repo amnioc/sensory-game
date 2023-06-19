@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction } from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import styles from "./sound-mode.module.css";
 
 export interface SoundModeProps {
@@ -13,7 +13,9 @@ const SoundMode: React.FC<SoundModeProps> = ({ isMuted, setIsMuted }) => {
   return (
     <label>
       Sound?
-      <button onClick={handleClick}>{isMuted ? <>off</> : <>on</>}</button>
+      <button onClick={handleClick} aria-label="change sound">
+        {isMuted ? <>off</> : <>on</>}
+      </button>
     </label>
   );
 };
