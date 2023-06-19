@@ -16,6 +16,7 @@ const SoundMode: React.FC<SoundModeProps> = ({ isMuted, setIsMuted }) => {
       <button onClick={handleClick} aria-label="change sound">
         {isMuted ? <>off</> : <>on</>}
       </button>
+
     </label>
   );
 };
