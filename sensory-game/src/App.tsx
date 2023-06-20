@@ -1,14 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./app.module.css";
 import GameButton from "./components/game-button/gameButton";
 import DarkMode from "./features/darkMode/DarkMode";
 import Header from "./features/header/Header";
 import SoundMode from "./features/soundMode/SoundMode";
+import { colorArrayLight } from "./assets/bgColours";
+import { colorArrayDark } from "./assets/bgColours";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
   const [isMuted, setIsMuted] = useState<boolean>(false);
-  const [bgColour, setBgColour] = useState<string>("linen");
+  const [bgColourIndex, setBgColourIndex] = useState<number>(0);
+
+  console.log(isDarkMode, colorArrayLight, colorArrayDark);
+  useEffect(() => {
+    isDarkMode
+      ? (document.body.style.backgroundColor = colorArrayDark[bgColourIndex])
+      : (document.body.style.backgroundColor = colorArrayLight[bgColourIndex]);
+  }, [bgColourIndex, isDarkMode]);
 
   return (
     <>
@@ -21,7 +30,13 @@ function App() {
           {Array(3)
             .fill(true)
             .map((_, i) => (
-              <GameButton isMuted={isMuted} isDarkMode={isDarkMode} key={i} />
+              <GameButton
+                isMuted={isMuted}
+                isDarkMode={isDarkMode}
+                setBgColourIndex={setBgColourIndex}
+                bgColourIndex={bgColourIndex}
+                key={i}
+              />
             ))}
         </section>
         <Header />
@@ -32,6 +47,8 @@ function App() {
               <GameButton
                 isMuted={isMuted}
                 isDarkMode={isDarkMode}
+                setBgColourIndex={setBgColourIndex}
+                bgColourIndex={bgColourIndex}
                 key={i + 3}
               />
             ))}
