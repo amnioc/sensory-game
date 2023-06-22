@@ -12,7 +12,6 @@ function App() {
   const [isMuted, setIsMuted] = useState<boolean>(false);
   const [bgColourIndex, setBgColourIndex] = useState<number>(0);
 
-  console.log(isDarkMode, colorArrayLight, colorArrayDark);
   useEffect(() => {
     isDarkMode
       ? (document.body.style.backgroundColor = colorArrayDark[bgColourIndex])
@@ -23,7 +22,11 @@ function App() {
     <>
       <section className={styles.settings}>
         <DarkMode isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
-        <SoundMode isMuted={isMuted} setIsMuted={setIsMuted} />
+        <SoundMode
+          isDarkMode={isDarkMode}
+          isMuted={isMuted}
+          setIsMuted={setIsMuted}
+        />
       </section>
       <main className={styles.game_body}>
         <section className={styles.game_top_row}>
@@ -39,7 +42,7 @@ function App() {
               />
             ))}
         </section>
-        <Header />
+        <Header isDarkMode={isDarkMode} />
         <section className={styles.game_bottom_row}>
           {Array(3)
             .fill(true)

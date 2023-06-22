@@ -5,14 +5,17 @@ import { colorArrayLight } from "../../assets/bgColours";
 
 export interface GameButtonProps {
   isMuted: boolean;
+  isDarkMode: boolean;
   setBgColourIndex: Dispatch<SetStateAction<number>>;
   bgColourIndex: number;
 }
 const GameButton: React.FC<GameButtonProps> = ({
   isMuted,
+  isDarkMode,
   setBgColourIndex,
   bgColourIndex,
 }) => {
+  const gButtonStyle = isDarkMode ? styles.gameButtonDM : styles.gameButtonLM;
   const audio = new Audio(click);
 
   const indexSet = () => {
@@ -32,7 +35,7 @@ const GameButton: React.FC<GameButtonProps> = ({
   return (
     <button
       aria-label="game play"
-      className={styles.gameButton}
+      className={gButtonStyle}
       onClick={makeColourAndSound}
     ></button>
   );

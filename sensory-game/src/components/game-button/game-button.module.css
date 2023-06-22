@@ -1,17 +1,35 @@
-.gameButton {
+.gameButtonLM {
   width: 5rem;
   height: 5rem;
   margin: 10px;
-  transition: opacity 0.2s;
-  border: 5px, solid, purple;
+  box-shadow: 0 2px #999;
 }
 
-.gameButton:focus,
-.gameButton:focus-visible {
-  border: 10px, solid, orange;
-  outline: 4px auto -webkit-focus-ring-color;
+.gameButtonDM {
+  width: 5rem;
+  height: 5rem;
+  margin: 10px;
+  box-shadow: 0 2px #9e9e9e;
 }
 
-.gameButton:hover {
-  border-color: #000dff;
+.gameButtonLM:focus,
+.gameButtonLM:hover,
+.gameButtonLM:focus-visible {
+  outline: solid 2px #302952;
+}
+
+.gameButtonDM:focus,
+.gameButtonDM:hover,
+.gameButtonDM:focus-visible {
+  outline: solid 2px #dad5f7;
+}
+
+.gameButtonLM:active {
+  box-shadow: 0 2.5px #666;
+  transform: translateY(2px);
+}
+
+.gameButtonDM:active {
+  box-shadow: 0 2.5px #353535;
+  transform: translateY(2px);
 }

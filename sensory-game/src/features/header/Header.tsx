@@ -1,8 +1,13 @@
 import React from "react";
 import styles from "./header.module.css";
 
-const Header = () => {
-  return <h1 className={styles.header}>Chill Clicks</h1>;
+export interface HeaderProps {
+  isDarkMode: boolean;
+}
+
+const Header: React.FC<HeaderProps> = ({ isDarkMode }) => {
+  const headerStyle = isDarkMode ? styles.headerDM : styles.headerLM;
+  return <h1 className={headerStyle}>Chill Clicks</h1>;
 };
 
 export default Header;

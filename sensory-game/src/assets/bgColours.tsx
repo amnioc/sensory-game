@@ -1,6 +1,6 @@
 export const colorArrayLight = [
   "honeydew",
-  "palegreen",
+  "#BAFDBA",
   "mistyrose",
   "gainsboro",
   "lemonchiffon",
@@ -8,12 +8,12 @@ export const colorArrayLight = [
 ];
 
 export const colorArrayDark = [
-  "blueviolet",
-  "mediumvioletred",
-  "darkolivegreen",
-  "darkslateblue",
-  "olive",
-  "slategray",
+  "#7334B0",
+  "maroon",
+  "#415224",
+  "#680277",
+  "#2F616B",
+  "#675C5C",
 ];
 
 // export default { colorArrayDark, colorArrayLight };
