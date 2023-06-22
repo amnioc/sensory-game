@@ -7,26 +7,34 @@ import DarkMode from "../features/darkMode/DarkMode";
 
 describe("Header", () => {
   it("should render Chill Clicks title", () => {
-    render(<Header />);
+    render(<Header isDarkMode={false} />);
     const titleElement = screen.getByText(/Chill Clicks/);
     expect(titleElement).toBeInTheDocument();
   });
 });
 
 describe("Game Button", () => {
-  render(<GameButton isMuted={false} isDarkMode={false} />);
+  render(
+    <GameButton
+      isMuted={false}
+      isDarkMode={false}
+      setBgColourIndex={() => {
+        return 2;
+      }}
+      bgColourIndex={1}
+    />
+  );
   const testButton = screen.getByRole("button", { name: /game play/ });
 
   it("should render a button with Game Play class name", () => {
     expect(testButton).toBeTruthy();
   });
 
-  //should play sound on click
-
   describe("SoundMode Button", () => {
     render(
       <SoundMode
         isMuted={false}
+        isDarkMode={false}
         setIsMuted={() => {
           return false;
         }}
@@ -42,8 +50,6 @@ describe("Game Button", () => {
     });
   });
 
-  //should change text on click
-
   describe("DarkMode Button", () => {
     render(
       <DarkMode
@@ -54,9 +60,4 @@ describe("Game Button", () => {
       />
     );
   });
-  //darkMode button
-  //is rendered
-  //should change text on click
-
-  //snapshot
 });

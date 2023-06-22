@@ -9,11 +9,19 @@ const DarkMode: React.FC<DarkModeProps> = ({ isDarkMode, setIsDarkMode }) => {
   const handleClick = () => {
     isDarkMode ? setIsDarkMode(false) : setIsDarkMode(true);
   };
+
+  const dmButtonStyle = isDarkMode ? styles.dmButtonDM : styles.dmButtonLM;
   return (
-    <label>
-      Dark Mode Toggle:{" "}
-      <button onClick={handleClick}>{isDarkMode ? <>on</> : <>off</>}</button>
-    </label>
+    <nav className={dmButtonStyle}>
+      Dark Mode?{" "}
+      <button
+        onClick={handleClick}
+        aria-label="toggle dark mode"
+        className={styles.dmButton}
+      >
+        {isDarkMode ? <>on</> : <>off</>}
+      </button>
+    </nav>
   );
 };
 export default DarkMode;

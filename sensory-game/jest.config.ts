@@ -5,5 +5,15 @@ module.exports = {
       "<rootDir>/src/__mocks__/fileMock.ts",
     "\\.(css|less)$": "<rootDir>/src/__mocks__/styleMock.ts",
   },
-  setupFilesAfterEnv: ["<rootDir>/src/__mocks__/setupTests.ts"],
+  setupFilesAfterEnv: ["<rootDir>/src/__mocks__/setupTests.ts"], //
+  roots: ["<rootDir>/src"],
+  /* Jest transformations -- this adds support for TypeScript
+  using ts-jest */
+  transform: {
+    // "^.+\\.tsx?$": "ts-jest",
+    "\\.tsx?$": "<rootDir>/node_modules/babel-jest", // Use <rootDir> .
+  },
+  // testEnvironment: "node",
+  testRegex: "/__tests__/.*\\.(test|spec)?\\.(ts|tsx)$",
+  moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
 };
