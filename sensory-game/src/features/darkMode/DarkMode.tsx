@@ -1,3 +1,4 @@
+import React from "react";
 import { Dispatch, SetStateAction } from "react";
 import styles from "./dark-mode.module.css";
 
