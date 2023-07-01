@@ -7,7 +7,11 @@ export interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ isDarkMode }) => {
   const headerStyle = isDarkMode ? styles.headerDM : styles.headerLM;
-  return <h1 className={headerStyle}>Chill Clicks</h1>;
+  return (
+    <h1 className={headerStyle} aria-label="game name">
+      Chill Clicks
+    </h1>
+  );
 };
 
 export default Header;

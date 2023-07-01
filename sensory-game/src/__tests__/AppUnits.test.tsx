@@ -2,11 +2,15 @@ import React from "react";
 import { cleanup, render } from "@testing-library/react";
 import App from "../App";
 
-//testing each Element is rendered
+//testing each Element is rendered as default settings
 
 afterEach(cleanup);
 
-describe("Components Render", () => {
+describe("App renders components", () => {
+  it('App should render with "honeydew" background colour', () => {
+    const app = render(<App />);
+    expect(app.baseElement).toHaveStyle("background-color: honeydew");
+  });
   it("should render Chill Clicks title", () => {
     const { getByText } = render(<App />);
     const titleElement = getByText(/Chill Clicks/);
