@@ -20,14 +20,15 @@ function App() {
 
   return (
     <>
-      <section className={styles.settings}>
+      <details className={styles.settings}>
+        <summary>Settings</summary>
         <DarkMode isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
         <SoundMode
           isDarkMode={isDarkMode}
           isMuted={isMuted}
           setIsMuted={setIsMuted}
         />
-      </section>
+      </details>
       <main className={styles.game_body}>
         <section className={styles.game_top_row}>
           {Array(3)
