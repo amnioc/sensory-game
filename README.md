@@ -2,6 +2,8 @@
 
 Welcome to Chill Clicks, a colour and auditory stimming (self-stimulating) app. Click the button tiles and see/hear what happens.
 
+The hosted app can be found here: https://chill-clicks.netlify.app/
+
 Sound Effects by <a href="https://pixabay.com/users/universfield-28281460/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=131917">UNIVERSFIELD</a> from <a href="https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=131917">Pixabay</a>
 
 ## Note from the creator
