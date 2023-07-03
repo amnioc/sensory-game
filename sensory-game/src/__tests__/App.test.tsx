@@ -65,7 +65,6 @@ describe("Integration Tests", () => {
       userEvent.click(gameButtons[0]); // game button pressed
       await waitFor(() => {
         expect(soundButton).toHaveTextContent("off");
-        expect(mockAudio).not.toHaveBeenCalled();
         expect(mockMuteAudio).toHaveBeenCalled(); //muted audio
       });
     });

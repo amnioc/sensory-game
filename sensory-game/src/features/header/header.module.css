@@ -6,3 +6,10 @@
   font-size: 4em;
   color: #bfb5f0;
 }
+
+@media (max-width: 340px) {
+  .headerDM,
+  .headerLM {
+    font-size: 3em;
+  }
+}

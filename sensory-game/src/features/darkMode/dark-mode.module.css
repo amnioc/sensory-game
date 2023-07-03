@@ -1,13 +1,19 @@
 .dmButton {
-  margin-left: 10px;
+  margin: 10px;
+}
+
+.dmButtonDM,
+.dmButtonLM {
+  font-size: 1.25em;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  align-items: center;
+  justify-items: start;
 }
 
 .dmButtonDM {
   color: #dad5f7;
-  font-size: 1.25em;
 }
-
 .dmButtonLM {
   color: #302952;
-  font-size: 1.25em;
 }

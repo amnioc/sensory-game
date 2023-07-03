@@ -18,10 +18,13 @@ function App() {
       : (document.body.style.backgroundColor = colorArrayLight[bgColourIndex]);
   }, [bgColourIndex, isDarkMode]);
 
+  const textStyle = isDarkMode ? styles.dropdownDM : styles.dropdownLM;
   return (
     <>
       <details className={styles.settings}>
-        <summary>Settings</summary>
+        <summary className={textStyle} aria-label="open menu">
+          Settings
+        </summary>
         <DarkMode isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
         <SoundMode
           isDarkMode={isDarkMode}
