@@ -1,13 +1,20 @@
 .smButton {
-  margin-left: 10px;
+  margin: 10px;
+  margin-top: 0;
+}
+
+.smButtonDM,
+.smButtonLM {
+  font-size: 1.25em;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  align-items: center;
+  justify-items: start;
 }
 
 .smButtonDM {
   color: #dad5f7;
-  font-size: 1.25em;
 }
-
 .smButtonLM {
   color: #302952;
-  font-size: 1.25em;
 }
