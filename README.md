@@ -15,7 +15,7 @@ This is an area of passion for me and there will be ongoing features added. For 
 Technologies and Skills used:
 
 React Framework (Hooks)
-Typescript
+TypeScript
 HTML5
 CSS Modules
 
