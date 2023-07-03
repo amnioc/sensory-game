@@ -1,4 +1,4 @@
-# Sensory Game App
+# Chill Clicks - Sensory Game App
 
 Welcome to Chill Clicks, a colour and auditory stimming (self-stimulating) app. Click the button tiles and see/hear what happens.
 
