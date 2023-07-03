@@ -20,7 +20,7 @@ CSS Modules
 Jest - unit and integration testing 
 React Testing
 
-Excalidraw - wireframes 
+Excalidraw - wireframes &
 Kanban (Trello) - track tasks
 
 ## Wireframe
