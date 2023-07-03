@@ -17,10 +17,10 @@ Typescript
 HTML5
 CSS Modules
 
-Jest - unit and integration testing
+Jest - unit and integration testing 
 React Testing
 
-Excalidraw - wireframes
+Excalidraw - wireframes 
 Kanban (Trello) - track tasks
 
 ## Wireframe
@@ -45,3 +45,4 @@ Kanban (Trello) - track tasks
 5. 'git clone URL'
 6. open folder, install dependencies ('npm i') then npm run dev
 7. Click the Local link returned in terminal, this will open in your browser!
+8. **To run tests: ** npm run test (will run both Unit and Integration tests, found in __ tests __ folder)
